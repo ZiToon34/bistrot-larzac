@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.le-bistrot-larzac-restaurant-la-vacquerie.fr/sitemap.xml

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/booking-restopro",
+      "destination": "https://reserver.bookatable.fr/le-bistrot-larzac",
+      "permanent": true
+    },
+    {
+      "source": "/reservation",
+      "destination": "https://reserver.bookatable.fr/le-bistrot-larzac",
+      "permanent": false
+    },
+    {
+      "source": "/repas-de-groupe",
+      "destination": "https://reserver.bookatable.fr/le-bistrot-larzac/privatisation",
+      "permanent": false
+    },
+    {
+      "source": "/repas-de-groupe-anniversaire-conference-congres-seminaire-le-bistrot-larzac-restaurant-la-vacquerie-et-saint-martin-de-castries-restaurant-lodeve-et-alentours",
+      "destination": "https://reserver.bookatable.fr/le-bistrot-larzac/privatisation",
+      "permanent": true
+    },
+    {
+      "source": "/le-restaurant-le-bistrot-larzac-restaurant-cirque-de-navacelle",
+      "destination": "/le-restaurant",
+      "permanent": true
+    },
+    {
+      "source": "/la-carte-le-bistrot-larzac-restaurant-larzac",
+      "destination": "/la-carte",
+      "permanent": true
+    },
+    {
+      "source": "/adresse-horaires-telephone-le-bistrot-larzac-restaurant-la-vacquerie-et-saint-martin-de-castries-restaurant-le-caylar",
+      "destination": "/nous-trouver",
+      "permanent": true
+    },
+    {
+      "source": "/nos-offres-d-emploi",
+      "destination": "/offres-emploi",
+      "permanent": true
+    },
+    {
+      "source": "/mentions-l%C3%A9gales",
+      "destination": "/mentions-legales",
+      "permanent": true
+    },
+    {
+      "source": "/mentions-légales",
+      "destination": "/mentions-legales",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://res.cloudinary.com; connect-src 'self' https://resacodex-api.onrender.com; frame-src https://www.google.com; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https://www.bookatable.fr"
+        }
+      ]
+    },
+    {
+      "source": "/(fonts|images)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    }
+  ]
+}

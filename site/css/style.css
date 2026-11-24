@@ -1,0 +1,358 @@
+/* ==========================================================================
+   Le Bistrot Larzac — feuille de style
+   Reprend le design d'origine : cuir marron, titres BioRhyme, sous-titres
+   Inter Tight en majuscules espacées, texte Lato, boutons terracotta.
+   ========================================================================== */
+
+/* ---------- Polices (hébergées sur le site : aucun appel à Google) ---------- */
+@font-face { font-family: "BioRhyme"; font-weight: 800; font-display: swap; src: url("/fonts/biorhyme-800.woff2") format("woff2"); }
+@font-face { font-family: "Inter Tight"; font-weight: 400; font-display: swap; src: url("/fonts/inter-tight-400.woff2") format("woff2"); }
+@font-face { font-family: "Inter Tight"; font-weight: 500; font-display: swap; src: url("/fonts/inter-tight-500.woff2") format("woff2"); }
+@font-face { font-family: "Inter Tight"; font-weight: 600; font-display: swap; src: url("/fonts/inter-tight-600.woff2") format("woff2"); }
+@font-face { font-family: "Lato"; font-weight: 300; font-display: swap; src: url("/fonts/lato-300.woff2") format("woff2"); }
+@font-face { font-family: "Lato"; font-weight: 400; font-display: swap; src: url("/fonts/lato-400.woff2") format("woff2"); }
+@font-face { font-family: "Lato"; font-weight: 400; font-style: italic; font-display: swap; src: url("/fonts/lato-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Lato"; font-weight: 700; font-display: swap; src: url("/fonts/lato-700.woff2") format("woff2"); }
+
+/* ---------- Couleurs et mesures ---------- */
+:root {
+  --brun: #280e08;          /* titres sur fond clair */
+  --terracotta: #c16546;    /* boutons, liens actifs */
+  --terracotta-fonce: #a5513a;
+  --creme: #f4eeed;         /* fond clair */
+  --texte: #3a2a26;
+  --pied: #24110c;          /* pied de page */
+  --noir: #141010;          /* barre du haut */
+  --cuir: url("/images/cuir.jpg");
+  --largeur: 1180px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--creme);
+  color: var(--texte);
+  font: 400 15px/1.75 "Lato", "Helvetica Neue", Arial, sans-serif;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+[hidden] { display: none !important; }
+
+/* ---------- Typographie ---------- */
+.titre {
+  font-family: "BioRhyme", Georgia, serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  margin: 0 0 .35em;
+  color: var(--brun);
+}
+.sous-titre {
+  font-family: "Inter Tight", Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: .78rem;
+  margin: 0 0 1.8em;
+  color: var(--brun);
+}
+.espace { letter-spacing: .45em; }
+.texte p { margin: 0 0 1.1em; }
+.sur-cuir, .sur-cuir .titre, .sur-cuir .sous-titre { color: #fff; }
+
+/* ---------- Boutons ---------- */
+.bouton {
+  display: inline-block;
+  background: var(--terracotta);
+  color: #fff;
+  text-decoration: none;
+  font: 500 13px/1 "Inter Tight", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 22px;
+  border: 0;
+  cursor: pointer;
+  transition: background .2s;
+}
+.bouton:hover, .bouton:focus-visible { background: var(--terracotta-fonce); }
+.bouton--contour { background: transparent; border: 1px solid currentColor; }
+
+/* ---------- Barre du haut + menu ---------- */
+.entete { position: fixed; inset: 0 0 auto 0; z-index: 50; transition: background .3s; }
+.entete.est-defile, .page-interieure .entete { background: rgba(20, 16, 16, .94); }
+.barre-recrute {
+  background: var(--noir);
+  color: #fff;
+  font: 500 12px/1 "Inter Tight", Arial, sans-serif;
+  padding: 8px 20px;
+}
+.barre-recrute a { text-decoration: none; }
+.barre-recrute a:hover { color: var(--terracotta); }
+.nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.nav__logo img { width: 56px; height: 50px; }
+.nav__logo { opacity: 0; transition: opacity .3s; }
+.entete.est-defile .nav__logo, .page-interieure .nav__logo { opacity: 1; }
+.nav__liens { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+.nav__liens a {
+  color: #fff;
+  text-decoration: none;
+  font: 500 13px/1 "Inter Tight", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.nav__liens a:hover, .nav__liens a[aria-current="page"] { color: var(--terracotta); }
+.nav__burger { display: none; background: none; border: 0; color: #fff; padding: 8px; cursor: pointer; }
+.nav__burger span { display: block; width: 26px; height: 2px; background: #fff; margin: 6px 0; }
+
+/* ---------- Accueil : grand bandeau ---------- */
+.hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
+.hero__gauche {
+  background: var(--cuir) center / cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 30px 60px;
+}
+.hero__logo { width: min(300px, 70%); height: auto; }
+.hero__titre {
+  font: 800 clamp(1.4rem, 2.2vw, 1.75rem)/1 "BioRhyme", Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  margin: 1.4em 0 .8em;
+  padding-bottom: .8em;
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+.hero__accroche {
+  font: 600 .78rem/2.2 "Inter Tight", Arial, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.hero__photo { background: #333 center / cover; min-height: 50vh; }
+
+/* ---------- Blocs texte + photo ---------- */
+.bloc { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+.bloc--cuir { background: var(--cuir) center / cover; }
+.bloc__photo { background: #ccc center / cover; min-height: 520px; }
+.bloc__texte { padding: clamp(40px, 7vw, 100px) clamp(24px, 6vw, 90px); align-self: center; }
+.bloc--inverse .bloc__photo { order: 2; }
+
+/* Bloc clair avec photo encadrée (accueil bloc 2, page restaurant) */
+.bloc-cadre {
+  max-width: var(--largeur);
+  margin: 0 auto;
+  padding: clamp(50px, 8vw, 110px) 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(30px, 6vw, 90px);
+  align-items: center;
+}
+.bloc-cadre--inverse .bloc-cadre__photo { order: -1; }
+.bloc-cadre__photo { position: relative; }
+.bloc-cadre__photo img { width: 100%; aspect-ratio: 5 / 6; object-fit: cover; }
+.bloc-cadre__photo .bloc-cadre__tampon {
+  aspect-ratio: auto;
+  position: absolute;
+  right: -55px;
+  bottom: -55px;
+  width: 130px;
+  height: auto;
+  pointer-events: none;
+}
+
+/* Séparateur décoratif */
+.separateur { max-width: var(--largeur); margin: 0 auto; padding: 50px 24px 0; }
+.separateur img { width: 100%; height: auto; }
+
+/* Bandeau de 4 photos */
+.galerie { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 6px; }
+.galerie img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+
+/* ---------- Pages intérieures : en-tête photo ---------- */
+.entete-page {
+  background: #2a1a14 url("/images/entete-pages.jpg") center / cover;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 190px 20px 110px;
+}
+.entete-page::before { content: ""; position: absolute; inset: 0; background: rgba(20, 10, 6, .45); }
+.entete-page > * { position: relative; }
+.entete-page__petit {
+  font: 600 .8rem/1 "Inter Tight", Arial, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0 0 1.2em;
+}
+.entete-page__titre {
+  font: 800 clamp(1.5rem, 3vw, 2.2rem)/1.2 "BioRhyme", Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: .45em;
+  margin: 0;
+}
+
+.contenu { max-width: var(--largeur); margin: 0 auto; padding: clamp(50px, 7vw, 90px) 24px; }
+.contenu--etroit { max-width: 820px; }
+
+/* ---------- La carte ---------- */
+.carte-menu {
+  background: #fff;
+  border: 1px solid #e6d9d5;
+  padding: clamp(28px, 5vw, 50px);
+  text-align: center;
+  margin-bottom: 60px;
+}
+.carte-menu__entete { display: flex; justify-content: center; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+.carte-menu__prix { font: 800 2rem/1 "BioRhyme", Georgia, serif; color: var(--terracotta); }
+.carte-menu__groupe { margin-top: 28px; }
+.carte-menu__groupe h3 {
+  font: 600 .8rem/1 "Inter Tight", Arial, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin: 0 0 12px;
+}
+.carte-menu__groupe ul { list-style: none; margin: 0; padding: 0; }
+.carte-menu__groupe li { padding: 3px 0; }
+.carte-menu__groupe li + li::before { content: "ou"; display: block; font-style: italic; color: #9a8580; font-size: .85em; }
+.carte-menu__supplement { color: #9a8580; font-size: .9em; }
+
+.carte-rubrique { margin-bottom: 50px; }
+[data-cms-carte] { margin-top: 30px; }
+.carte-rubrique__titre {
+  font: 800 1.3rem/1.2 "BioRhyme", Georgia, serif;
+  text-transform: uppercase;
+  color: var(--brun);
+  border-bottom: 1px solid var(--terracotta);
+  padding-bottom: 10px;
+  margin: 0 0 18px;
+}
+.carte-article { padding: 10px 0; }
+.carte-article__ligne { display: flex; align-items: baseline; gap: 10px; }
+.carte-article__nom { font-weight: 700; color: var(--brun); }
+.carte-article__points { flex: 1; border-bottom: 1px dotted #b9a7a2; transform: translateY(-4px); }
+.carte-article__prix { font-weight: 700; color: var(--terracotta); white-space: nowrap; }
+.carte-article__desc { margin: 2px 0 0; font-style: italic; color: #6f5c57; font-size: .93em; }
+.carte-note { text-align: center; font-style: italic; color: #6f5c57; }
+
+/* ---------- Nous trouver ---------- */
+.trouver { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 6vw, 80px); align-items: start; }
+.trouver__adresse { display: flex; gap: 18px; align-items: flex-start; margin-bottom: 26px; }
+.trouver__adresse img { width: 44px; height: auto; flex: none; }
+.trouver__adresse p { margin: 0; font-weight: 700; color: var(--brun); text-transform: uppercase; letter-spacing: 1px; }
+.trouver__boutons { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0; }
+.carte-google {
+  background: #e9dfdc;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+  padding: 24px;
+}
+.carte-google iframe { width: 100%; height: 100%; border: 0; }
+.carte-google small { color: #6f5c57; max-width: 340px; }
+
+/* Tableau des horaires (pied de page et Nous trouver) */
+.horaires { list-style: none; margin: 0; padding: 0; }
+.horaires li { display: flex; gap: 8px; }
+.horaires li span:last-child { white-space: nowrap; }
+.horaires__jour { min-width: 80px; }
+.horaires__jour::after { content: " :"; }
+
+/* ---------- Offres d'emploi ---------- */
+.offre { background: #fff; border-left: 4px solid var(--terracotta); padding: 24px 28px; margin-bottom: 22px; }
+.offre__poste { font: 800 1.15rem/1.3 "BioRhyme", Georgia, serif; color: var(--brun); margin: 0 0 6px; text-transform: uppercase; }
+.offre__infos { font: 600 .75rem/1.6 "Inter Tight", Arial, sans-serif; letter-spacing: 2px; text-transform: uppercase; color: var(--terracotta); margin: 0 0 12px; }
+.offre__desc p { margin: 0 0 .8em; }
+
+/* ---------- Mentions légales ---------- */
+.mentions h2 { font: 800 1.05rem/1.3 "BioRhyme", Georgia, serif; text-transform: uppercase; color: var(--brun); margin: 2em 0 .6em; }
+.mentions p { margin: 0 0 .5em; }
+
+/* ---------- Pied de page ---------- */
+.pied { background: var(--pied); color: #e8dcd8; font-size: 14px; }
+.pied__haut {
+  max-width: var(--largeur);
+  margin: 0 auto;
+  padding: 60px 24px;
+  display: grid;
+  grid-template-columns: 180px 1.5fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.pied__logo img { width: 180px; height: auto; }
+.pied h2 { font: 800 1rem/1.2 "BioRhyme", Georgia, serif; color: #fff; margin: 0 0 14px; }
+.pied ul { list-style: none; margin: 0; padding: 0; }
+.pied a { text-decoration: none; }
+.pied a:hover { color: var(--terracotta); }
+.pied__reseaux { display: flex; gap: 10px; margin-top: 16px; }
+.pied__reseaux a {
+  width: 38px; height: 38px;
+  border: 1px solid #e8dcd8;
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.pied__reseaux svg { width: 18px; height: 18px; fill: currentColor; }
+.pied__bas { background: #170b08; text-align: center; padding: 14px 20px; font-size: 12.5px; color: #b9a7a2; }
+.pied__bas a { color: #e8dcd8; }
+
+/* ---------- Annonce (pop-up) ---------- */
+.annonce { position: fixed; inset: 0; z-index: 100; background: rgba(0, 0, 0, .6); display: flex; align-items: center; justify-content: center; padding: 20px; }
+.annonce__boite { background: var(--creme); max-width: 480px; width: 100%; padding: 40px 32px 32px; text-align: center; position: relative; }
+.annonce__fermer { position: absolute; top: 10px; right: 14px; background: none; border: 0; font-size: 28px; line-height: 1; cursor: pointer; color: var(--brun); }
+
+/* ---------- Tablette et mobile ---------- */
+@media (max-width: 960px) {
+  .nav__burger { display: block; }
+  .nav__logo { opacity: 1; }
+  .entete { background: rgba(20, 16, 16, .94); }
+  .nav__liens {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(20, 16, 16, .97);
+    padding: 10px 0 20px;
+  }
+  .nav__liens.est-ouvert { display: flex; }
+  .nav__liens a { display: block; padding: 14px 24px; }
+  .hero, .bloc, .bloc-cadre, .trouver { grid-template-columns: 1fr; }
+  .hero__gauche { padding-top: 140px; }
+  .bloc__photo { min-height: 320px; }
+  .bloc--inverse .bloc__photo { order: 0; }
+  .bloc-cadre--inverse .bloc-cadre__photo { order: 0; }
+  .bloc-cadre__photo .bloc-cadre__tampon { right: 10px; bottom: -40px; width: 100px; }
+  .galerie { grid-template-columns: repeat(2, 1fr); }
+  .pied__haut { grid-template-columns: 1fr 1fr; }
+  .pied__logo { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) {
+  body { font-size: 14.5px; }
+  .pied__haut { grid-template-columns: 1fr; }
+  .barre-recrute { text-align: center; }
+  .entete-page { padding: 170px 16px 80px; }
+  .entete-page__titre { letter-spacing: .2em; }
+}
+
+/* ---------- Photos de fond par défaut (générées) ---------- */
+[data-cms-bg="accueil.hero_photo"] { background-image: url("/images/salle.jpg"); }
+[data-cms-bg="accueil.b1_photo"] { background-image: url("/images/viande.jpg"); }
+[data-cms-bg="accueil.b3_photo"] { background-image: url("/images/terrasse.jpg"); }
+[data-cms-bg="restaurant.b3_photo"] { background-image: url("/images/traiteur.jpg"); }

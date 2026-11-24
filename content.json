@@ -1,0 +1,698 @@
+{
+  "sections": [
+    {
+      "id": "infos",
+      "label": "Informations générales",
+      "fields": [
+        {
+          "id": "nom",
+          "label": "Nom du restaurant",
+          "type": "text",
+          "value": "Le Bistrot Larzac"
+        },
+        {
+          "id": "telephone",
+          "label": "Téléphone",
+          "type": "text",
+          "value": "04 99 91 43 20"
+        },
+        {
+          "id": "adresse1",
+          "label": "Adresse — ligne 1",
+          "type": "text",
+          "value": "56 grand rue"
+        },
+        {
+          "id": "adresse2",
+          "label": "Adresse — ligne 2 (code postal et ville)",
+          "type": "text",
+          "value": "34520 La Vacquerie-et-Saint-Martin-de-Castries"
+        },
+        {
+          "id": "facebook",
+          "label": "Lien Facebook",
+          "type": "text",
+          "value": "https://www.facebook.com/people/le-bistrot-larzac-2/61572381531474/"
+        },
+        {
+          "id": "instagram",
+          "label": "Lien Instagram",
+          "type": "text",
+          "value": "https://www.instagram.com/lebistrotlarzac/"
+        },
+        {
+          "id": "tripadvisor",
+          "label": "Lien Tripadvisor",
+          "type": "text",
+          "value": "https://www.tripadvisor.fr/Restaurant_Review-g1810110-d14117386-Reviews-Le_Bistrot_Larzac-La_Vacquerie_et_Saint_Martin_de_Castries_Herault_Occitanie.html"
+        }
+      ]
+    },
+    {
+      "id": "horaires",
+      "label": "Horaires d'ouverture",
+      "fields": [
+        {
+          "id": "jours",
+          "label": "Horaires (un jour par ligne)",
+          "type": "liste",
+          "value": [
+            {
+              "label": "Lundi",
+              "valeur": "Fermé"
+            },
+            {
+              "label": "Mardi",
+              "valeur": "Fermé"
+            },
+            {
+              "label": "Mercredi",
+              "valeur": "Fermé"
+            },
+            {
+              "label": "Jeudi",
+              "valeur": "12h00 - 14h00 / 19h00 - 21h00"
+            },
+            {
+              "label": "Vendredi",
+              "valeur": "12h00 - 14h00 / 19h00 - 21h00"
+            },
+            {
+              "label": "Samedi",
+              "valeur": "12h00 - 14h00 / 19h00 - 21h00"
+            },
+            {
+              "label": "Dimanche",
+              "valeur": "12h00 - 14h00 / 19h00 - 21h00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bandeau",
+      "label": "Bandeau du haut et annonce",
+      "fields": [
+        {
+          "id": "recrute_visible",
+          "label": "Afficher « Nous recrutons » en haut du site",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "id": "recrute_texte",
+          "label": "Texte « Nous recrutons »",
+          "type": "text",
+          "value": "Nous recrutons ! Déposez votre CV par ici"
+        },
+        {
+          "id": "popup_visible",
+          "label": "Afficher une annonce à l'ouverture du site",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "id": "popup_titre",
+          "label": "Annonce — titre",
+          "type": "text",
+          "value": "Fermeture annuelle"
+        },
+        {
+          "id": "popup_texte",
+          "label": "Annonce — texte",
+          "type": "text",
+          "value": "Le restaurant est fermé du ... au ... Nous serons heureux de vous retrouver dès le ..."
+        }
+      ]
+    },
+    {
+      "id": "accueil",
+      "label": "Accueil",
+      "fields": [
+        {
+          "id": "hero_titre",
+          "label": "Grand titre sous le logo",
+          "type": "text",
+          "value": "Restaurant"
+        },
+        {
+          "id": "hero_ligne1",
+          "label": "Accroche — ligne 1",
+          "type": "text",
+          "value": "Feu de bois — cuisine du marché"
+        },
+        {
+          "id": "hero_ligne2",
+          "label": "Accroche — ligne 2",
+          "type": "text",
+          "value": "Bar à vins — bières"
+        },
+        {
+          "id": "hero_photo",
+          "label": "Photo à droite du logo",
+          "type": "image",
+          "value": "salle.jpg"
+        },
+        {
+          "id": "b1_titre",
+          "label": "Bloc 1 — titre",
+          "type": "text",
+          "value": "Restaurant La Vacquerie"
+        },
+        {
+          "id": "b1_sous_titre",
+          "label": "Bloc 1 — sous-titre",
+          "type": "text",
+          "value": "Cuisine au feu de bois à deux pas du Cirque de Navacelles"
+        },
+        {
+          "id": "b1_texte",
+          "label": "Bloc 1 — texte",
+          "type": "text",
+          "value": "Le Bistrot du Larzac vous accueille à La Vacquerie-et-Saint-Martin-de-Castries, à l’entrée du village sur la route principale, entre Lodève et Le Caylar. Ce restaurant traditionnel au charme de chalet est idéalement situé pour une pause gourmande après une balade au Cirque de Navacelles, à La Couvertoirade ou au Lac du Salagou.\nOuvert du jeudi au dimanche, le bistrot propose une ambiance chaleureuse et détendue, avec une terrasse ombragée pour les beaux jours. L’atmosphère est conviviale, parfaite pour se retrouver entre amis ou en famille autour d’un bon repas, loin de l’agitation touristique."
+        },
+        {
+          "id": "b1_photo",
+          "label": "Bloc 1 — photo",
+          "type": "image",
+          "value": "viande.jpg"
+        },
+        {
+          "id": "b2_titre",
+          "label": "Bloc 2 — titre",
+          "type": "text",
+          "value": "Produits du Larzac et cuisine maison"
+        },
+        {
+          "id": "b2_sous_titre",
+          "label": "Bloc 2 — sous-titre",
+          "type": "text",
+          "value": "Restaurant Cirque de Navacelles"
+        },
+        {
+          "id": "b2_texte",
+          "label": "Bloc 2 — texte",
+          "type": "text",
+          "value": "Tous les plats sont préparés au feu de bois, à partir de produits locaux soigneusement sélectionnés. Les légumes et la viande viennent du plateau du Larzac, les vins sont issus des vignobles de l’Hérault, et les bières artisanales proviennent de la Brasserie du Larzac ou de la Brasserie La Bière du Docteur.\nChaque samedi matin, le chef reçoit la pêche sauvage de ses amis. En fonction des arrivages et des saisons, il compose des assiettes uniques, copieuses et généreuses. Rien n’est laissé au hasard, pas même la pâte à tarte faite maison. Le résultat : une cuisine sincère, goûteuse et authentique."
+        },
+        {
+          "id": "b2_photo",
+          "label": "Bloc 2 — photo",
+          "type": "image",
+          "value": "pates.jpg"
+        },
+        {
+          "id": "galerie",
+          "label": "Photos des plats (bandeau)",
+          "type": "image-list",
+          "value": [
+            "plat-a.jpg",
+            "plat-e.jpg",
+            "plat-d.jpg",
+            "plat-b.jpg"
+          ]
+        },
+        {
+          "id": "b3_titre",
+          "label": "Bloc 3 — titre",
+          "type": "text",
+          "value": "Une ambiance bistrot & chalet sur le Larzac"
+        },
+        {
+          "id": "b3_sous_titre",
+          "label": "Bloc 3 — sous-titre",
+          "type": "text",
+          "value": "Restaurant Lodève et alentours"
+        },
+        {
+          "id": "b3_texte",
+          "label": "Bloc 3 — texte",
+          "type": "text",
+          "value": "Recommandé dans le Guide du Larzac, le restaurant se distingue par sa convivialité et son excellent rapport qualité-prix. Le chef, aussi grilladin passionné, prend le temps d’échanger avec ses clients et de créer une atmosphère agréable, sans stress.\nEn été, des concerts sont organisés une à deux fois par mois pour accompagner le dîner sans troubler la quiétude des lieux. C’est le spot idéal pour une soirée tranquille, un déjeuner entre deux randonnées ou une pause gourmande sur les routes du Larzac."
+        },
+        {
+          "id": "b3_photo",
+          "label": "Bloc 3 — photo",
+          "type": "image",
+          "value": "terrasse.jpg"
+        }
+      ]
+    },
+    {
+      "id": "restaurant",
+      "label": "Page « Le restaurant »",
+      "fields": [
+        {
+          "id": "b1_titre",
+          "label": "Bloc 1 — titre",
+          "type": "text",
+          "value": "Cuisine au feu de bois et produits frais"
+        },
+        {
+          "id": "b1_sous_titre",
+          "label": "Bloc 1 — sous-titre",
+          "type": "text",
+          "value": "Restaurant Larzac"
+        },
+        {
+          "id": "b1_texte",
+          "label": "Bloc 1 — texte",
+          "type": "text",
+          "value": "Au Bistrot du Larzac, le feu de bois est au cœur de la cuisine. Que ce soit pour griller des viandes d’exception ou pour mijoter des plats de terroir, le chef met en valeur le produit brut dans toute sa simplicité. Légumes de saison, viandes locales, poissons fraîchement pêchés : ici, chaque assiette raconte une histoire.\nLa carte change selon les saisons et les inspirations du moment. Parmi les incontournables, on retrouve la salade de gésiers, les viandes tendres et fondantes, ou encore des plats généreux à partager. Le tout est servi avec soin, dans une ambiance conviviale et chaleureuse."
+        },
+        {
+          "id": "b1_photo",
+          "label": "Bloc 1 — photo",
+          "type": "image",
+          "value": "cuisine-feu-de-bois.jpg"
+        },
+        {
+          "id": "b2_titre",
+          "label": "Bloc 2 — titre",
+          "type": "text",
+          "value": "Bistrot gourmand et terroir local"
+        },
+        {
+          "id": "b2_sous_titre",
+          "label": "Bloc 2 — sous-titre",
+          "type": "text",
+          "value": "Restaurant Le Caylar"
+        },
+        {
+          "id": "b2_texte",
+          "label": "Bloc 2 — texte",
+          "type": "text",
+          "value": "Le bistrot propose des plats copieux à prix raisonnables, pensés pour les gourmands. Le gérant prend le temps de sélectionner des produits de qualité et de composer des assiettes généreuses. Le midi comme le soir, on y mange bien, sans chichis.\nLes boissons ne sont pas en reste : vins du Languedoc, bières artisanales locales, eaux de source... Chaque élément du repas est choisi pour sa qualité et son authenticité. Le lieu séduit autant les habitués que les voyageurs de passage sur la route du Larzac."
+        },
+        {
+          "id": "b2_photo",
+          "label": "Bloc 2 — photo",
+          "type": "image",
+          "value": "vins.jpg"
+        },
+        {
+          "id": "galerie",
+          "label": "Photos des plats (bandeau)",
+          "type": "image-list",
+          "value": [
+            "plat-3.jpg",
+            "plat-2.jpg",
+            "plat-4.jpg",
+            "plat-1.jpg"
+          ]
+        },
+        {
+          "id": "b3_titre",
+          "label": "Bloc privatisation — titre",
+          "type": "text",
+          "value": "Privatisation restaurant Larzac"
+        },
+        {
+          "id": "b3_sous_titre",
+          "label": "Bloc privatisation — sous-titre",
+          "type": "text",
+          "value": "Groupe et ambiance chalet dès 25 personnes"
+        },
+        {
+          "id": "b3_texte",
+          "label": "Bloc privatisation — texte",
+          "type": "text",
+          "value": "Pour vos repas de groupe, le Bistrot du Larzac peut être privatisé à partir de 25 personnes. Que ce soit pour un anniversaire, un repas associatif ou une sortie rando-gourmande, tout est mis en œuvre pour vous faire passer un moment convivial, dans un cadre rustique et naturel."
+        },
+        {
+          "id": "b3_photo",
+          "label": "Bloc privatisation — photo",
+          "type": "image",
+          "value": "traiteur.jpg"
+        },
+        {
+          "id": "b4_texte",
+          "label": "Bloc final — texte",
+          "type": "text",
+          "value": "Avec son ambiance de chalet, sa cuisine maison, son feu de bois et sa terrasse ombragée, le restaurant offre un cadre authentique au cœur de l’Hérault. Une escale idéale pour savourer une cuisine vraie, à deux pas de sites incontournables comme le Cirque de Navacelles ou le Causse du Larzac."
+        },
+        {
+          "id": "b4_photo",
+          "label": "Bloc final — photo",
+          "type": "image",
+          "value": "tarte-fraise.jpg"
+        }
+      ]
+    },
+    {
+      "id": "carte",
+      "label": "Page « La carte »",
+      "fields": [
+        {
+          "id": "menu_visible",
+          "label": "Afficher le menu",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "id": "menu_titre",
+          "label": "Menu — nom",
+          "type": "text",
+          "value": "Menu"
+        },
+        {
+          "id": "menu_prix",
+          "label": "Menu — prix",
+          "type": "text",
+          "value": "25 €"
+        },
+        {
+          "id": "menu_detail",
+          "label": "Menu — composition",
+          "type": "text",
+          "value": "Entrée + Plat + Dessert"
+        },
+        {
+          "id": "entrees_titre",
+          "label": "Menu — titre des entrées",
+          "type": "text",
+          "value": "Entrées - 7 €"
+        },
+        {
+          "id": "entrees",
+          "label": "Menu — entrées (prix ou supplément facultatif)",
+          "type": "liste",
+          "value": [
+            {
+              "label": "Salade chèvre",
+              "valeur": ""
+            },
+            {
+              "label": "Salade gésier",
+              "valeur": ""
+            },
+            {
+              "label": "Charcuterie de la ferme",
+              "valeur": ""
+            },
+            {
+              "label": "Tomato tonato",
+              "valeur": ""
+            }
+          ]
+        },
+        {
+          "id": "plats_titre",
+          "label": "Menu — titre des plats",
+          "type": "text",
+          "value": "Plats - 15 €"
+        },
+        {
+          "id": "plats",
+          "label": "Menu — plats (prix ou supplément facultatif)",
+          "type": "liste",
+          "value": [
+            {
+              "label": "Saucisse grillée",
+              "valeur": ""
+            },
+            {
+              "label": "Boudin noir",
+              "valeur": ""
+            },
+            {
+              "label": "Poulet mariné",
+              "valeur": ""
+            },
+            {
+              "label": "Demi magret",
+              "valeur": "suppl. 4 €"
+            }
+          ]
+        },
+        {
+          "id": "desserts_titre",
+          "label": "Menu — titre des desserts",
+          "type": "text",
+          "value": "Desserts"
+        },
+        {
+          "id": "desserts",
+          "label": "Menu — desserts (laisser vide pour masquer)",
+          "type": "liste",
+          "value": []
+        },
+        {
+          "id": "carte_titre",
+          "label": "Titre de la carte",
+          "type": "text",
+          "value": "À la carte"
+        },
+        {
+          "id": "articles",
+          "label": "Plats à la carte",
+          "type": "repeteur",
+          "value": [
+            {
+              "rubrique": "Grillades",
+              "nom": "Entrecôte",
+              "description": "",
+              "prix": "26,00 €"
+            },
+            {
+              "rubrique": "Grillades",
+              "nom": "Brochette Magret",
+              "description": "",
+              "prix": "25,00 €"
+            },
+            {
+              "rubrique": "Grillades",
+              "nom": "Côtes Agneau",
+              "description": "",
+              "prix": "21,00 €"
+            },
+            {
+              "rubrique": "Grillades",
+              "nom": "Mix Grill",
+              "description": "Bœuf / Canard / Agneau",
+              "prix": "25,00 €"
+            },
+            {
+              "rubrique": "Grillades",
+              "nom": "Gambas",
+              "description": "",
+              "prix": "22,00 €"
+            },
+            {
+              "rubrique": "Grillades",
+              "nom": "Côte de porc",
+              "description": "",
+              "prix": "25,00 €"
+            },
+            {
+              "rubrique": "Salades repas",
+              "nom": "La Caesar",
+              "description": "Salade, tomates confites, œuf, parmesan, croûtons, poulet, anchois",
+              "prix": "15,00 €"
+            },
+            {
+              "rubrique": "Salades repas",
+              "nom": "La Gardaren",
+              "description": "Salade, cébettes, crudités de saison, roquefort, chèvre chaud, gésiers de volaille confits",
+              "prix": "16,00 €"
+            },
+            {
+              "rubrique": "Suggestions",
+              "nom": "Tartare de truite",
+              "description": "",
+              "prix": "12,00 €"
+            },
+            {
+              "rubrique": "Suggestions",
+              "nom": "Côte de bœuf",
+              "description": "",
+              "prix": "65,00 €"
+            },
+            {
+              "rubrique": "Suggestions",
+              "nom": "T-Bone",
+              "description": "",
+              "prix": "67,00 €"
+            },
+            {
+              "rubrique": "Suggestions",
+              "nom": "Gigot de mouton grillé",
+              "description": "",
+              "prix": "18,00 €"
+            },
+            {
+              "rubrique": "Sauces",
+              "nom": "Roquefort",
+              "description": "",
+              "prix": "2,00 €"
+            },
+            {
+              "rubrique": "Sauces",
+              "nom": "Poivre",
+              "description": "",
+              "prix": "2,00 €"
+            },
+            {
+              "rubrique": "Sauces",
+              "nom": "Moutarde",
+              "description": "",
+              "prix": "2,00 €"
+            }
+          ],
+          "schema": [
+            {
+              "id": "rubrique",
+              "label": "Rubrique",
+              "type": "select",
+              "options": [
+                "Grillades",
+                "Salades repas",
+                "Suggestions",
+                "Desserts",
+                "Sauces",
+                "Autre..."
+              ]
+            },
+            {
+              "id": "nom",
+              "label": "Nom du plat",
+              "type": "text"
+            },
+            {
+              "id": "description",
+              "label": "Description (facultatif)",
+              "type": "textarea"
+            },
+            {
+              "id": "prix",
+              "label": "Prix",
+              "type": "text",
+              "placeholder": "ex. 18,00 €"
+            }
+          ]
+        },
+        {
+          "id": "note",
+          "label": "Note sous la carte",
+          "type": "text",
+          "value": "Prix nets, service compris. La carte peut varier selon les arrivages et les saisons."
+        }
+      ]
+    },
+    {
+      "id": "trouver",
+      "label": "Page « Nous trouver »",
+      "fields": [
+        {
+          "id": "texte",
+          "label": "Texte d'accès",
+          "type": "text",
+          "value": "À l’entrée du village, sur la route principale, entre Lodève et Le Caylar. À deux pas du Cirque de Navacelles, de La Couvertoirade et du Lac du Salagou."
+        },
+        {
+          "id": "carte_recherche",
+          "label": "Adresse cherchée sur la carte",
+          "type": "text",
+          "value": "Le Bistrot Larzac, 56 grand rue, 34520 La Vacquerie-et-Saint-Martin-de-Castries"
+        }
+      ]
+    },
+    {
+      "id": "emploi",
+      "label": "Page « Offres d'emploi »",
+      "fields": [
+        {
+          "id": "intro",
+          "label": "Texte d'introduction",
+          "type": "text",
+          "value": "Vous aimez le feu de bois, les produits du Larzac et le travail en équipe ? Rejoignez le Bistrot Larzac !"
+        },
+        {
+          "id": "email_cv",
+          "label": "Adresse email qui reçoit les CV",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "id": "offres",
+          "label": "Offres d'emploi",
+          "type": "repeteur",
+          "value": [],
+          "schema": [
+            {
+              "id": "masquee",
+              "label": "Masquer cette offre (sans la supprimer)",
+              "type": "boolean"
+            },
+            {
+              "id": "poste",
+              "label": "Poste",
+              "type": "text",
+              "placeholder": "ex. Serveur / Serveuse"
+            },
+            {
+              "id": "contrat",
+              "label": "Contrat",
+              "type": "select",
+              "options": [
+                "Saisonnier",
+                "CDD",
+                "CDI",
+                "Extra",
+                "Apprentissage",
+                "Autre..."
+              ]
+            },
+            {
+              "id": "periode",
+              "label": "Période",
+              "type": "text",
+              "placeholder": "ex. Avril à octobre"
+            },
+            {
+              "id": "description",
+              "label": "Description",
+              "type": "textarea"
+            }
+          ]
+        },
+        {
+          "id": "aucune_offre",
+          "label": "Texte quand il n'y a aucune offre",
+          "type": "text",
+          "value": "Aucune offre n’est publiée pour le moment, mais vous pouvez nous envoyer une candidature spontanée."
+        }
+      ]
+    },
+    {
+      "id": "mentions",
+      "label": "Mentions légales",
+      "fields": [
+        {
+          "id": "societe",
+          "label": "Nom de la société",
+          "type": "text",
+          "value": "ZAGO"
+        },
+        {
+          "id": "siret",
+          "label": "Numéro SIREN ou SIRET",
+          "type": "text",
+          "value": "937 748 465"
+        },
+        {
+          "id": "responsable",
+          "label": "Responsable de la publication",
+          "type": "text",
+          "value": "Thomas ZAGO"
+        },
+        {
+          "id": "mediateur",
+          "label": "Médiateur de la consommation",
+          "type": "text",
+          "value": "SMP – Société Médiation Professionnelle, 24 rue Albert de Mun, 33000 Bordeaux – www.mediateur-consommation-smp.fr"
+        }
+      ]
+    }
+  ]
+}
