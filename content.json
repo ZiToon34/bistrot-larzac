@@ -676,9 +676,9 @@
         },
         {
           "id": "siret",
-          "label": "Numéro SIREN ou SIRET",
+          "label": "Numéro SIRET",
           "type": "text",
-          "value": "937 748 465"
+          "value": "937 748 465 00021"
         },
         {
           "id": "responsable",
